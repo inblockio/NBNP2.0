@@ -6,7 +6,7 @@ const crypto = require('crypto');
 const fs = require('fs');
 let encryption = '';
 let config = {};
-let name = 'RChain Meetup Berlin, 14. Aug 2018'; // empty name falls back to the contract default
+let name = 'RChain Meetup Berlin AUgust 14th 2018'; // empty name falls back to the contract default
 let deposit = web3.toWei(0.04, 'ether');; // 0 falls back to the contract default
 let limitOfParticipants = 3; // 0 falls back to the contract default
 // eg: truffle migrate --config '{"name":"CodeUp No..", "limitOfParticipants":15, "encryption":"./tmp/test_public.key"}'

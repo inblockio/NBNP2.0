@@ -287,11 +287,11 @@ window.onload = function() {
       <div>
         <MuiThemeProvider muiTheme={getMuiTheme()}>
           <div>
-            <AppBar titleStyle={{textAlign:'center', fontSize:'xx-large', fontFamily:'Lobster'}} style={{backgroundColor:"#607D8B"}}
+            <AppBar className='berlinbg' titleStyle={{textAlign:'center', fontSize:'3em', fontFamily:'Lobster'}} style={{backgroundColor:"#607D8B", margin:'0vh 0vh 15vh 0vh'}}
               title={
-                <span>Block Party<span style={{fontSize:'small', fontFamily:'sans-serif'}}> - NO BLOCK NO PARTY -</span></span>
+                <span>Block Party<span style={{fontSize:'small', fontFamily:'sans-serif'}}> - NO BLOCK NO PARTY - forked from @makoto_inoue</span></span>
               }
-              iconElementLeft={<Avatar src={require('./images/nightclub-white.png')} size={50} backgroundColor="rgb(96, 125, 139)" />}
+              iconElementLeft={<div><Avatar className='inblockioavatars' src={require('./images/nbnplogo3.png')} size={100} backgroundColor="" /> <Avatar className='inblockioavatars' src={require('./images/nbnplogoinbl.png')} size={100} backgroundColor="" /></div>}
               iconElementRight={
                 <span>
                   {networkLabel}
