@@ -11,7 +11,7 @@ module.exports = {
   },
   ropsten: {
     contract_addresses:{
-      'Conference': "0x7534438a65c42c449be6b20885451b7181502a99"
+      'Conference': null
     },
     name: 'ROPSTEN NET',
     etherscan_url: 'https://ropsten.etherscan.io'

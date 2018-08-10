@@ -1,10 +1,10 @@
 const yargs = require('yargs');
 var provider, address;
-
+require('dotenv').config();
 //const HDWalletProvider = require("truffle-hdwallet-provider-privkey");
-const privKeyRopsten = "5da28899b6f5621f34ca8ab5b89c7fe23f8ee43c6f761339fafc57d4091b6167"; // private keys
+//var privKeyRopsten = "5da28899b6f5621f34ca8ab5b89c7fe23f8ee43c6f761339fafc57d4091b6167"; // private keys
+var privKeyRopsten = process.env.privKeyRopsten;
 //const provider = new HDWalletProvider(privKeys, "http://localhost:8545");
-require('dotenv').config()
 const PrivateKeyProvider = require("truffle-privatekey-provider");
 // Not using remote node until secure way to store seed/private key is established.
 //
