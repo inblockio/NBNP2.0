@@ -291,7 +291,7 @@ window.onload = function() {
               title={
                 <span>Block Party<span style={{fontSize:'small', fontFamily:'sans-serif'}}> - NO BLOCK NO PARTY - forked from @makoto_inoue</span></span>
               }
-              iconElementLeft={<div><Avatar className='inblockioavatars' src={require('./images/nbnplogo3.png')} size={100} backgroundColor="" /> <Avatar className='inblockioavatars' src={require('./images/nbnplogoinbl.png')} size={100} backgroundColor="" /></div>}
+              iconElementLeft={<div><Avatar className='inblockioavatars' src={require('./images/nbnplogo3.png')} size={100} backgroundColor="" /> <Avatar className='inblockioavatars2' src={require('./images/nbnplogoinbl.png')} size={100} backgroundColor="" /></div>}
               iconElementRight={
                 <span>
                   {networkLabel}

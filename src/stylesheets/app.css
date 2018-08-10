@@ -22,4 +22,13 @@
 
 .inblockioavatars {
 	border-radius: 0 !important;
+	background-color: transparent !important;
+	margin-top: 0.1em;
+}
+
+.inblockioavatars2 {
+	border-radius: 0 !important;
+	float: right;
+	background-color: transparent !important;
+	margin-top: 0.11em;
 }
