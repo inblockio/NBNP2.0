@@ -1,14 +1,14 @@
 const Conference = artifacts.require("./Conference.sol");
-const coolingPeriod = 1 * 60 * 60 * 24 * 7;
+let coolingPeriod = 0; //1 * 60 * 60 * 24 * 7; //was 1 week is brought to default if 0 by contract -U
 // this is already required by truffle;
 const yargs = require('yargs');
 const crypto = require('crypto');
 const fs = require('fs');
 let encryption = '';
 let config = {};
-let name = 'RChain Meetup Berlin August 14th 2018'; // empty name falls back to the contract default
-let deposit = web3.toWei(0.04, 'ether');; // 0 falls back to the contract default
-let limitOfParticipants = 3; // 0 falls back to the contract default
+let name = ''; // empty name falls back to the contract default
+let deposit = web3.toWei(0, 'ether');; // 0 falls back to the contract default
+let limitOfParticipants = 0; // 0 falls back to the contract default
 // eg: truffle migrate --config '{"name":"CodeUp No..", "limitOfParticipants":15, "encryption":"./tmp/test_public.key"}'
 if (yargs.argv.config) {
   config = JSON.parse(yargs.argv.config);
@@ -24,6 +24,14 @@ module.exports = function(deployer) {
 
   if (config.limitOfParticipants){
     limitOfParticipants = config.limitOfParticipants;
+  }
+
+  if (config.coolingPeriod){
+    coolingPeriod = config.coolingPeriod * 86400; //needs input in days -U
+  }
+
+  if (config.deposit){
+    deposit = web3.toWei(config.deposit, 'ether'); //needs input in ether -U
   }
 
   if (config.encryption) {
